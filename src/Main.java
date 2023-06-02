@@ -145,7 +145,7 @@ class Arayuz extends Tasarim {
 
         JLabel lblMailAralik=new JLabel("Mail gönderme aralıkları(dk):");
         fontRengi(lblMailAralik);
-        lblMailAralik.setBounds(50, 30, 215, 20);
+        lblMailAralik.setBounds(50, 30, 230, 20);
         JTextField txtMailAralik=new JTextField(40);
         txtDetaylar(txtMailAralik);
         txtMailAralik.setText("1");
@@ -154,7 +154,7 @@ class Arayuz extends Tasarim {
 
         JLabel lblEmail=new JLabel("Gönderilecek mail hesabı:");
         fontRengi(lblEmail);
-        lblEmail.setBounds(50, 70, 215, 20);
+        lblEmail.setBounds(50, 70, 230, 20);
         JTextField txtEmail=new JTextField(40);
         txtDetaylar(txtEmail);
         txtEmail.setText("ornek@gmail.com");
@@ -163,7 +163,7 @@ class Arayuz extends Tasarim {
 
         JLabel lblDosyaBoyutu=new JLabel("Maximum dosya boyutu(mb):");
         fontRengi(lblDosyaBoyutu);
-        lblDosyaBoyutu.setBounds(50, 110, 225, 20);
+        lblDosyaBoyutu.setBounds(50, 110, 230, 20);
         JTextField txtDosyaBoyutu=new JTextField(40);
         txtDetaylar(txtDosyaBoyutu);
         txtDosyaBoyutu.setText("1");
@@ -436,7 +436,7 @@ class MailGonderme {
             public void run() {
                 mailGonderme(to);
             }
-        }, 0, dakika * 60 * 1000); // 1 dakikada bir (5 * 60 * 1000 milisaniye)
+        }, dakika * 60 * 1000, dakika * 60 * 1000); // 1 dakikada bir (5 * 60 * 1000 milisaniye)
     }
     private void mailGonderme(String to) {
         String from = "ilaydatiryaki25@gmail.com"; // Gönderen e-posta adresi
